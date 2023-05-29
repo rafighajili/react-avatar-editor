@@ -24,7 +24,7 @@ Object.keys(bottts.schema.properties).forEach((element) => {
 
 let initialOptions = {};
 Object.keys(allOptions).forEach((element) => {
-  initialOptions = { [element]: [allOptions[element][0]], ...initialOptions };
+  initialOptions = { [element]: allOptions[element][0], ...initialOptions };
 });
 
 const enums = {

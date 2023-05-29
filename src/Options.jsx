@@ -30,9 +30,7 @@ export default function Options({ avatarOptions, setAvatarOptions }) {
               <button key={key} onClick={() => setAvatarOptions((prev) => ({ ...prev, [keyTitle]: [value] }))}>
                 <Avatar
                   options={{ ...avatarOptions, [keyTitle]: [value] }}
-                  className={`${
-                    avatarOptions?.[keyTitle]?.[0] === value ? 'ring-2 ring-offset-2' : 'hover:ring-2 hover:ring-offset-2'
-                  } ring-blue-500 ring-offset-white duration-200`}
+                  className={`${avatarOptions?.[keyTitle] === value ? 'ring-2 ring-offset-2' : 'hover:ring-2 hover:ring-offset-2'} ring-blue-500 ring-offset-white duration-200`}
                 />
               </button>
             ))}
